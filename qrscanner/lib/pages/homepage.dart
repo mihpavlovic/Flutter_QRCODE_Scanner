@@ -44,7 +44,14 @@ class _HomePageState extends State<HomePage> {
 
             Expanded(
               flex: 4,
-              child: Container(color: Colors.red),
+              child: MobileScanner(
+                controller: MobileScannerController(
+                  detectionSpeed: DetectionSpeed.noDuplicates
+                ),
+                onDetect: (capture){
+                  print(capture);
+                }
+              ),
             ),
 
             Expanded(
@@ -58,6 +65,7 @@ class _HomePageState extends State<HomePage> {
                 )
               )
             ),
+            
           ],
         )
       )
