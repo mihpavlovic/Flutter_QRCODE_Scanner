@@ -15,8 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'QRCODE_READER',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        appBarTheme: const AppBarTheme(backgroundColor: Colors.transparent, elevation: 0.0)
       ),
       home: const HomePage()
     );
